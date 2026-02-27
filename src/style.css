@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: #000000;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: 100vh;
+}
+
+/* VR Button styling */
+#VRButton {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 24px;
+  background-color: #00ff88;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 999;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 255, 136, 0.3);
+}
+
+#VRButton:hover {
+  background-color: #00dd77;
+  box-shadow: 0 6px 16px rgba(0, 255, 136, 0.5);
+  transform: translateX(-50%) translateY(-2px);
+}
+
+#VRButton:active {
+  transform: translateX(-50%) translateY(0);
+}

@@ -36,9 +36,9 @@ controls.enableDamping = true
 controls.dampingFactor = 0.05
 controls.update()
 
-// Add VR button — request hand-tracking feature
+// Add VR button — hand-tracking as optional for broader compatibility
 document.body.appendChild(VRButton.createButton(renderer, {
-  requiredFeatures: ['hand-tracking']
+  optionalFeatures: ['hand-tracking']
 }))
 
 // ========== LOAD THE HOUSE MODEL ==========

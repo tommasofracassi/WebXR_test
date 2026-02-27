@@ -38,11 +38,14 @@ export class SceneManager {
         areaLight.height = 10
         this.scene.add(areaLight)
 
-        // OrbitControls (desktop only)
+        // OrbitControls (desktop only) — free rotation around the house at origin
         this.controls = new OrbitControls(this.camera, this.renderer.domElement)
         this.controls.target.set(0, 0, 0)
         this.controls.enableDamping = true
         this.controls.dampingFactor = 0.05
+        this.controls.enablePan = false         // Keep the house centered
+        this.controls.minPolarAngle = 0         // Allow looking from top
+        this.controls.maxPolarAngle = Math.PI   // Allow looking from bottom
         this.controls.update()
 
         // Handle resize
